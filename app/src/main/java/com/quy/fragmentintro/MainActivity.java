@@ -12,8 +12,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements VersionAndroidFragmentListener {
 
     private FrameLayout frameLayout;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements VersionAndroidFra
         setContentView(R.layout.activity_main);
         frameLayout = findViewById(R.id.fragment_container);
 
-        fragmentManager = getSupportFragmentManager();
+        fragmentManager = getSupportFragmentManager(); //Return the FragmentManager for interacting with fragments associated with this activity.
         fragmentTransaction = fragmentManager.beginTransaction();
 
         DemoFragment demoFragment = new DemoFragment();
